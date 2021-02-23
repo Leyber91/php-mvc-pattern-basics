@@ -29,7 +29,7 @@ echo '<br>';
 
 </head>
 <body>
-
+<button class= 'logOutBtn'><a href='http://localhost/LeyberProject/php-mvc-pattern-basics/views/login/login.php?logout=true'>LOGOUT</a></button>
 
 
 
