@@ -24,6 +24,7 @@ echo file_get_contents('http://localhost/LeyberProject/php-mvc-pattern-basics/co
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>MVC</title>
 
 </head>

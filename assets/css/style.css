@@ -1,210 +1,178 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
+
+html {
+    width: 100%;
+    height:100%;
+	overflow: hidden;
+	color: white;
 }
-
-a:active, a:focus, button {
-    outline: 0;
-    border: none;
-  }
-
-
 body {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    flex-direction: column;
-    font-size: 1em;
-    color:rgb(255, 251, 251);
-    text-decoration: none;
+	width: 100%;
+	height:100%;
+    font-size: 14px;
 }
 
-div::after {
-    background-image: url('https://i.pinimg.com/564x/7c/db/51/7cdb51724c8505b689b8dc1f9db6f489.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1; 
-    content: "";
-}
+.text_val {
+    font-size: 14px;
+    color: rgb(0, 248, 21);
+    margin-bottom: 2em;
+    text-align: center;}
 
 form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    flex-direction: column;
-    align-content: center;
-
+	text-align: center;
 }
 
-.signInBtn {
-    width: 20%;
-    font-size: 1em;
-    height: fit-content;
+:root {
+    background-color: rgb(0, 0, 0)
 }
 
-.signInBtn, .submitBtn, .returnBtn {
-    justify-content: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    /* We add a digital style */
+    font-family: 'Orbitron', cursive;
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: rgb(0, 248, 21);
+    margin-bottom: 5rem;
     text-align: center;
-    border-radius:5em;
-    margin: 1em 1.5em 2em 1.5em;
-    border: 1em solid rgba(60, 253, 218, 0.501);
-    border-left-width: 0.5em;
-    border-right-width: 0.5em;
-    border-top-width: 0.1em;
-    transition-timing-function: ease-in-out;
-    background-image: linear-gradient(rgba(62, 119, 114, 0.638), 0.6, rgba(36, 35, 35, 0.316), rgba(0, 0, 0, 0.507));
-    color:rgb(13, 15, 16);
-    /*I set the transition properties, the duration and the effects.*/
-    transition-property: box-shadow text-shadow;
-    transition-duration: 100ms;
-    transition-timing-function: ease-out;
-    text-decoration: none;
-    width: 30%;
-    font-weight: bold;
-    font-size: 18px;
+}
+
+input {
+	margin: 0 2em;
+}
+
+
+
+h2 {
+    font-size: 4.2rem;
+	margin-bottom: 4rem;
+	color: white;
 
 }
 
-.signInBtn:hover, .submitBtn:hover, .returnBtn:hover{
-    transform: scale(1.05);
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0em 0.2em 0.3em 0.15em rgb(0, 225, 255);
-    /*text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;*/
-    text-shadow: 0em 0em 0.1em rgb(0, 255, 229);
-    text-decoration: none;
-
-
-}
-
-.signInBtn:active, .submitBtn:active, .returnBtn:active{
-    border-top-width: 0.25em;
-    border-bottom-width: 0.8em;
-    border-left-width: 0.45em;
-    border-right-width: 0.45em;
-    background-image: linear-gradient(rgb(66, 158, 151), rgb(74, 237, 201), rgb(122, 246, 255));
-    transform: scale(1);
-    text-decoration: none;
-
-}
-
-form > button > a {
-    text-decoration: none;
-    color:rgb(1, 2, 2);
-
-}
-
-/* FOOTER CONTROLLER*/
-.controller {
+.container {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 16vh;
-    position: relative;
     justify-content: center;
-    align-content: space-evenly;
     align-items: center;
-    transform: rotateX(
-30deg
-);
-    border-bottom: 0.3em solid #08fbff;
-    background-image: linear-gradient(#2effe763, #0eb6d3ba, #91fffdb5);
-    top: 0;
-    box-shadow:  0 0.7em 0.7em #00ffe5, 0 0.7em 0.7em #09f8f4, 0 -0.4em 0.7em #00ffe5, 0 -0.4em 0.7em #00fdf9;
-    border-radius: 1em 1em / 1em 1em;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-/*DISPLAY CONTROLLER*/
-.elementHidden {
-    display:none;
-}
-
-.returnBtn {
-    text-decoration: none;
-    color: black
-
-}
-
-#returnLink {
-    text-decoration: none;
-    color: black
-
-}
-
-.inputItem{
+.flex-column {
     display: flex;
-    align-content: space-between;
-    width: 100%;
     flex-direction: column;
-    text-align: center;
+}
+
+.flex-center {
+    justify-content: center;
     align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn, button {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(0, 255, 21);
+    background: black;
+    border-radius: 4px;
+    border-width: 2px;
+    border-color: chartreuse;
+    border-style: solid ;
+    text-decoration: none;
 
 }
 
-.inputItem > input {
-    width: 90%;
-    border-radius: 7em/3.5em;
-    background-color: rgba(5, 243, 243, 0.748);
+.btn:hover, button:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(28, 244, 8, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn[disabled]:hover, button[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#highscore-btn {
+    background: black;
+}
+
+#highscore-btn:hover {
+    box-shadow: 0 0.4rem 2.4rem 0 rgba(0, 250, 21, 0.576)
+}
+
+.fa-crown {
+    font-size: 2.5rem;
+    margin-left: 1rem;
+}
+
+/* End Page CSS */
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
     border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text {
+    font-size: 2.4rem;
+    color: #fff;
     text-align: center;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    min-height: 2.5em;
-    font-size: 18px;
-   
-
 }
 
-.inputItem > label {
-    font-weight: bold;
-    color: rgb(93, 255, 233);
-    font-size: 24px;
-    text-shadow: 0em 0em 0.2em rgb(0, 255, 229) ;
+#saveScoreBtn {
+    border: none;
 }
 
-.inputPair {
-    text-align: center;
-    display: flex;
-}
-
-.title {
-    font-size: 28px;
-}
-
-.infoForm {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    align-content: space-evenly;
-    justify-content: space-between;
-    padding: 1em 1em;
-    border: 1em solid #43effa;
-    border-radius:  1em 1em 1em / 11em 13em 11em 11em;
-    background-color:#00ffe557;
-  
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0.5em 0em 0.3em 0.1em rgba(150, 194, 182, 0.796), -0.5em 0em 0.3em 0.1em rgba(113, 151, 140, 0.796);
-    min-width: 50em;
-    max-width: 95vw;
-    height: 76vh;
-    border-bottom : none;
-    border-top : none;
-    position: relative;
-    background-size: cover;
-    margin: 2em;
-    overflow: hidden;
-}
-
-button.logOutBtn > a {
-text-decoration: none;
+.fa-home {
+    margin-left: 1rem;
+    font-size: 2rem;
+    color: rgb(28, 26, 26)
 }
