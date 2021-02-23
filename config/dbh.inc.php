@@ -13,4 +13,5 @@ if (!$conn) {
 else if ($conn){
     echo 'hola';
 }
+?>
 
