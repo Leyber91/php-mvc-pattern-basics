@@ -33,6 +33,17 @@ echo file_get_contents('http://localhost/LeyberProject/php-mvc-pattern-basics/co
 
 
     <?php
+
+        echo "
+        <header>
+            <img src='../'>
+            <nav class = 'nav'>
+                <button class = 'dashboardBtn'><a href='http://localhost/LeyberProject/php-mvc-pattern-basics/views/employee/employee.php'>EMPLOYEES</a></button>
+                <button class = 'logInBtn'><a href='http://localhost/LeyberProject/php-mvc-pattern-basics/views/employee/login.php'>LOGIN</a></button>
+                <button class = 'SignUpBtn'><a href='http://localhost/LeyberProject/php-mvc-pattern-basics/views/login/signup.php'>SIGNUP</a></button>
+                </nav>
+        </header>";
+
     function console_log( $data ){
     echo '<script>';
     
@@ -41,6 +52,7 @@ echo file_get_contents('http://localhost/LeyberProject/php-mvc-pattern-basics/co
     }
 
     console_log('hiiii');
+    
     ?>
 
 </body>

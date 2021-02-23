@@ -1,13 +1,8 @@
 <?php
 
-$path = './models/employeeModel.php';
-echo "Path : $path";
-require "$path";
 
-include_once("http://localhost/LeyberProject/php-mvc-pattern-basics/views/employee/employeeModel.php");
-require './models/employeeModel.php';
+require $_SERVER['DOCUMENT_ROOT'].'/LeyberProject/php-mvc-pattern-basics/models/employeeModel.php';
 
-$method = $_SERVER["REQUEST_METHOD"];
 
 //OBTAIN THE ACCION PASSED IN THE URL AND EXECUTE IT AS A FUNCTION
 
@@ -24,7 +19,6 @@ function getAllEmployees()
 {
     //
     echo var_dump(get());
-    echo MODELS ;
     require_once VIEWS . "/employee/employeeModel.php";
     
 }
@@ -45,28 +39,28 @@ function error($errorMsg)
     require_once VIEWS . "/error/error.php";
 }
 
-// switch ($method) {
-//     case "GET":
-//         echo var_dump(get());
-//         echo var_dump(getById(1));
-//         echo var_dump(getByLastName());
-//         break;
+switch ($method) {
+    case "GET":
+        echo var_dump(get());
+        echo var_dump(getById(1));
+        echo var_dump(getByLastName());
+        break;
 
-//     // case "DELETE":
-//     //     deleteEmployee($data, $employeeArray, $employeeJsonPath);
-//     //     break;
+    // case "DELETE":
+    //     deleteEmployee($data, $employeeArray, $employeeJsonPath);
+    //     break;
 
-//     // case "PATCH":
-//     //     updateEmployee($data, $employeeArray, $employeeJsonPath);
-//     //     break;
+    // case "PATCH":
+    //     updateEmployee($data, $employeeArray, $employeeJsonPath);
+    //     break;
 
-//     // case "POST":
-//     //     addEmployee($data, $employeeArray, $employeeJsonPath);
-//     //     break;
+    // case "POST":
+    //     addEmployee($data, $employeeArray, $employeeJsonPath);
+    //     break;
 
-//     default:
-//         break;
-// }
+    default:
+        break;
+}
 
-var_dump(getAllEmployees());
+//var_dump(getAllEmployees());
 // ?>

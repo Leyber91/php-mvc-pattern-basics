@@ -76,15 +76,18 @@ function createUser($conn, $name, $email, $username, $pwd) {
     $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../signup.php?erro=stmtfailed");
+        header("location: http://localhost/LeyberProject/php-mvc-pattern-basics/views/login/signup.php?erro=stmtfailed");
         exit();
     }
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hassedPwd);
+    mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../signup.php?error=none");
+    header("location: http://localhost/LeyberProject/php-mvc-pattern-basics/views/login/signup.php?error=none");
     exit();
 }
+
+?>
+

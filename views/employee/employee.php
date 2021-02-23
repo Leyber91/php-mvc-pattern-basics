@@ -1,13 +1,17 @@
+
+
+
 <?php
 
 echo 'hiiiiiiii';
 // require_once CONTROLLERS . "employeeModel.php";
 // echo CONTROLLERS;
 
-require('./controllers/employeeController.php');
+require $_SERVER['DOCUMENT_ROOT'].'/LeyberProject/php-mvc-pattern-basics/controllers/employeeController.php';
 
-
-var_dump(getAllEmployees());
+echo '<br>';
+echo '<br>';
+//getAllEmployees();
 
 ?>
 

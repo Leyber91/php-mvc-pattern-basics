@@ -1,5 +1,6 @@
 <?php
-include_once("./employees.php");
+
+include $_SERVER['DOCUMENT_ROOT'].'/LeyberProject/php-mvc-pattern-basics/models/employees.php';
 
 
 function get(){
@@ -18,8 +19,9 @@ function getByLastName(){
 }
 
 echo '<pre>';
-echo var_dump(get());
+
+echo var_dump (get());
 echo var_dump(getById(1));
 echo var_dump(getByLastName());
-
+echo '</pre>';
 ?>
