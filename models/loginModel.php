@@ -1,4 +1,5 @@
 <?php
+require('../models/signupModel.php');
 
 function emptyInputLogin($username, $pwd) {
     $result;
@@ -11,14 +12,14 @@ function emptyInputLogin($username, $pwd) {
     }
     return $result;
 }
-function uidExists($conn, $username, $email) {
-    $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
-    $stmt = mysqli_stmt_init($conn);
-    if(!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../views/login/signup.php?error=stmtfailed");
-        exit();
-    }
-}
+// function uidExists($conn, $username, $email) {
+//     $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
+//     $stmt = mysqli_stmt_init($conn);
+//     if(!mysqli_stmt_prepare($stmt, $sql)) {
+//         header("location: ../views/login/signup.php?error=stmtfailed");
+//         exit();
+//     }
+// }
 
 function loginUser($conn, $username, $pwd) {
     $uidExists = uidExists($conn, $username, $username);
